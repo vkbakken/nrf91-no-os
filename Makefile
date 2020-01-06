@@ -29,15 +29,11 @@ clean:
 
 # objects from asm files
 .s.o:
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 # objects from c files
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# objects from c++ files
-.cpp.o:
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 
 # elf file
